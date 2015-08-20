@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HYLImageViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jUv-0x-vPj">
+                                <rect key="frame" x="252" y="154" width="96" height="30"/>
+                                <state key="normal" title="Normal Image">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vxM-ou-7mR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T2y-bd-HiO">
+                                <rect key="frame" x="258" y="236" width="85" height="30"/>
+                                <state key="normal" title="Small Image">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cDC-Ky-Rpe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9p7-7I-01G">
+                                <rect key="frame" x="258" y="309" width="85" height="30"/>
+                                <state key="normal" title="Large Image">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6OR-D2-2G4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ckR-Xe-uA4">
+                                <rect key="frame" x="258" y="369" width="85" height="30"/>
+                                <state key="normal" title="Image URLs">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed4:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f9Q-JH-XDD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="jUv-0x-vPj" secondAttribute="centerX" id="BC6-Uu-2ki"/>
+                            <constraint firstAttribute="centerX" secondItem="9p7-7I-01G" secondAttribute="centerX" constant="-0.5" id="GpA-WD-Ysn"/>
+                            <constraint firstItem="T2y-bd-HiO" firstAttribute="top" secondItem="jUv-0x-vPj" secondAttribute="bottom" constant="52" id="Icu-26-WXp"/>
+                            <constraint firstAttribute="centerY" secondItem="T2y-bd-HiO" secondAttribute="centerY" constant="49" id="Pbz-J2-lLe"/>
+                            <constraint firstItem="ckR-Xe-uA4" firstAttribute="top" secondItem="9p7-7I-01G" secondAttribute="bottom" constant="30" id="khj-C7-sjw"/>
+                            <constraint firstAttribute="centerX" secondItem="T2y-bd-HiO" secondAttribute="centerX" constant="-0.5" id="otf-il-MUf"/>
+                            <constraint firstAttribute="centerX" secondItem="ckR-Xe-uA4" secondAttribute="centerX" constant="-0.5" id="rOT-Kc-wUc"/>
+                            <constraint firstItem="9p7-7I-01G" firstAttribute="top" secondItem="T2y-bd-HiO" secondAttribute="bottom" constant="43" id="rrn-VW-TEo"/>
+                            <constraint firstAttribute="centerY" secondItem="jUv-0x-vPj" secondAttribute="centerY" constant="131" id="slz-Qn-X9i"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Pbz-J2-lLe"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
