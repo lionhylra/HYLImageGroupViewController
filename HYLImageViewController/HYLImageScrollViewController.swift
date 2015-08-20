@@ -11,20 +11,15 @@ import Kingfisher
 
 class HYLImageScrollViewController: UIViewController, UIScrollViewDelegate {
     
-    let maskView = UIView()
-    let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.WhiteLarge)
-    let scrollView = UIScrollView()
+    // MARK: - Private Properties
+    private let maskView = UIView()
+    private let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.WhiteLarge)
+    private let scrollView = UIScrollView()
     private let imageView = UIImageView()
-    private var image:UIImage?{
-        didSet{
-//            self.layoutSubViews()
-//            self.configureScrollView()
-//            self.configureImageView()
-//            self.view.layoutIfNeeded()
-        }
-    }
+    private var image:UIImage?
     private var imageURL:NSURL?
     
+    // MARK: - Initializers
     convenience init(image:UIImage){
         self.init()
         self.image = image
@@ -76,6 +71,37 @@ class HYLImageScrollViewController: UIViewController, UIScrollViewDelegate {
     func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
         return self.imageView
     }
+    
+    // MARK: - Event Response
+    func scrollViewDoubleTapped(recognizer: UITapGestureRecognizer) {
+        if self.scrollView.zoomScale == self.scrollView.maximumZoomScale {
+            self.scrollView.setZoomScale(self.scrollView.minimumZoomScale, animated: true)
+        }else{
+            
+            // 1
+            let pointInView = recognizer.locationInView(imageView)
+            
+            /*
+            // 2
+            var newZoomScale = scrollView.maximumZoomScale
+            
+            // 3
+            let scrollViewSize = scrollView.bounds.size
+            let w = scrollViewSize.width / newZoomScale
+            let h = scrollViewSize.height / newZoomScale
+            let x = pointInView.x - (w / 2.0)
+            let y = pointInView.y - (h / 2.0)
+            
+            //let rectToZoomTo = CGRectMake(x, y, w, h)
+            */
+            
+            let rectToZoomTo = CGRectMake(pointInView.x, pointInView.y, 10.0, 10.0)
+            
+            // 4
+            scrollView.zoomToRect(rectToZoomTo, animated: true)
+        }
+    }
+
     
     // MARK: - Private Methods
     private func layoutSubViews(){
@@ -169,33 +195,4 @@ class HYLImageScrollViewController: UIViewController, UIScrollViewDelegate {
         
     }
     
-    // MARK: - Event Response
-    func scrollViewDoubleTapped(recognizer: UITapGestureRecognizer) {
-        if self.scrollView.zoomScale == self.scrollView.maximumZoomScale {
-            self.scrollView.setZoomScale(self.scrollView.minimumZoomScale, animated: true)
-        }else{
-        
-            // 1
-            let pointInView = recognizer.locationInView(imageView)
-            
-            /*
-            // 2
-            var newZoomScale = scrollView.maximumZoomScale
-            
-            // 3
-            let scrollViewSize = scrollView.bounds.size
-            let w = scrollViewSize.width / newZoomScale
-            let h = scrollViewSize.height / newZoomScale
-            let x = pointInView.x - (w / 2.0)
-            let y = pointInView.y - (h / 2.0)
-            
-            //let rectToZoomTo = CGRectMake(x, y, w, h)
-            */
-            
-            let rectToZoomTo = CGRectMake(pointInView.x, pointInView.y, 10.0, 10.0)
-            
-            // 4
-            scrollView.zoomToRect(rectToZoomTo, animated: true)
-        }
     }
-}

@@ -13,11 +13,13 @@ let kPageInterval:CGFloat = 20.0
 let kPageSize:CGSize = UIScreen.mainScreen().bounds.size
 
 class HYLMultiImagesViewController: UIViewController, UIScrollViewDelegate {
-    //MARK: - Properties
+    //MARK: - Private Properties
     private let scrollView:UIScrollView = UIScrollView()
     private let pageControl:UIPageControl = UIPageControl()
     private var images:[UIImage?]?
     private var imageURLs:[NSURL?]?
+    
+    // MARK: - Public Properties
     var currentPage:Int = 0 {
         didSet{
             if currentPage >= imagesCount{
@@ -60,7 +62,6 @@ class HYLMultiImagesViewController: UIViewController, UIScrollViewDelegate {
         /* prepare subViews */
         addSubViews()
         layoutSubviews()
-//        self.scrollView.layoutIfNeeded()//This line is a workaround for a bug. If this line is deleted, at the first time the view is opened with URL, it's layout will be incorrect. I don't know why.
         
         /* configure subViews */
         configurePageControl()
