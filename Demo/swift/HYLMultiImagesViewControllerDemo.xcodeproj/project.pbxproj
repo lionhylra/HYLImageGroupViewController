@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		591F3E941B8714F800D5388D /* HYLFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591F3E911B8714F800D5388D /* HYLFileManager.swift */; };
-		591F3E951B8714F800D5388D /* UIImage+Compress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591F3E921B8714F800D5388D /* UIImage+Compress.swift */; };
-		591F3E961B8714F800D5388D /* HYLImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591F3E931B8714F800D5388D /* HYLImageManager.swift */; };
+		591F3EA21B8715EC00D5388D /* HYLImageCachedDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591F3E981B8715EC00D5388D /* HYLImageCachedDownloader.swift */; };
+		591F3EA31B8715EC00D5388D /* HYLFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591F3E9B1B8715EC00D5388D /* HYLFileManager.swift */; };
+		591F3EA41B8715EC00D5388D /* UIImage+Compress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591F3E9C1B8715EC00D5388D /* UIImage+Compress.swift */; };
+		591F3EA51B8715EC00D5388D /* HYLImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591F3E9D1B8715EC00D5388D /* HYLImageManager.swift */; };
+		591F3EA61B8715EC00D5388D /* HYLImageScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591F3E9E1B8715EC00D5388D /* HYLImageScrollViewController.swift */; };
+		591F3EA71B8715EC00D5388D /* HYLMultiImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591F3E9F1B8715EC00D5388D /* HYLMultiImagesViewController.swift */; };
+		591F3EA81B8715EC00D5388D /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591F3EA01B8715EC00D5388D /* String+MD5.swift */; };
+		591F3EA91B8715EC00D5388D /* UIImageView+LocalCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591F3EA11B8715EC00D5388D /* UIImageView+LocalCache.swift */; };
 		59A5184E1B82D650003B533A /* HYLImageViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A5184D1B82D650003B533A /* HYLImageViewControllerTests.swift */; };
-		59D824FE1B86D9380094F558 /* HYLImageCachedDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D824F91B86D9380094F558 /* HYLImageCachedDownloader.swift */; };
-		59D824FF1B86D9380094F558 /* HYLImageScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D824FA1B86D9380094F558 /* HYLImageScrollViewController.swift */; };
-		59D825001B86D9380094F558 /* HYLMultiImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D824FB1B86D9380094F558 /* HYLMultiImagesViewController.swift */; };
-		59D825011B86D9380094F558 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D824FC1B86D9380094F558 /* String+MD5.swift */; };
-		59D825021B86D9380094F558 /* UIImageView+LocalCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D824FD1B86D9380094F558 /* UIImageView+LocalCache.swift */; };
 		59D825231B86DB270094F558 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D8251A1B86DB270094F558 /* AppDelegate.swift */; };
 		59D825241B86DB270094F558 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59D8251B1B86DB270094F558 /* LaunchScreen.xib */; };
 		59D825251B86DB270094F558 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59D8251D1B86DB270094F558 /* Main.storyboard */; };
@@ -34,18 +34,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		591F3E911B8714F800D5388D /* HYLFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYLFileManager.swift; sourceTree = "<group>"; };
-		591F3E921B8714F800D5388D /* UIImage+Compress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Compress.swift"; sourceTree = "<group>"; };
-		591F3E931B8714F800D5388D /* HYLImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYLImageManager.swift; sourceTree = "<group>"; };
+		591F3E981B8715EC00D5388D /* HYLImageCachedDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYLImageCachedDownloader.swift; sourceTree = "<group>"; };
+		591F3E9B1B8715EC00D5388D /* HYLFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYLFileManager.swift; sourceTree = "<group>"; };
+		591F3E9C1B8715EC00D5388D /* UIImage+Compress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Compress.swift"; sourceTree = "<group>"; };
+		591F3E9D1B8715EC00D5388D /* HYLImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYLImageManager.swift; sourceTree = "<group>"; };
+		591F3E9E1B8715EC00D5388D /* HYLImageScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYLImageScrollViewController.swift; sourceTree = "<group>"; };
+		591F3E9F1B8715EC00D5388D /* HYLMultiImagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYLMultiImagesViewController.swift; sourceTree = "<group>"; };
+		591F3EA01B8715EC00D5388D /* String+MD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+MD5.swift"; sourceTree = "<group>"; };
+		591F3EA11B8715EC00D5388D /* UIImageView+LocalCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+LocalCache.swift"; sourceTree = "<group>"; };
 		59A518321B82D64F003B533A /* HYLMultiImagesViewControllerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HYLMultiImagesViewControllerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59A518471B82D650003B533A /* HYLMultiImagesViewControllerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HYLMultiImagesViewControllerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		59A5184C1B82D650003B533A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59A5184D1B82D650003B533A /* HYLImageViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYLImageViewControllerTests.swift; sourceTree = "<group>"; };
-		59D824F91B86D9380094F558 /* HYLImageCachedDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYLImageCachedDownloader.swift; sourceTree = "<group>"; };
-		59D824FA1B86D9380094F558 /* HYLImageScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYLImageScrollViewController.swift; sourceTree = "<group>"; };
-		59D824FB1B86D9380094F558 /* HYLMultiImagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYLMultiImagesViewController.swift; sourceTree = "<group>"; };
-		59D824FC1B86D9380094F558 /* String+MD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+MD5.swift"; sourceTree = "<group>"; };
-		59D824FD1B86D9380094F558 /* UIImageView+LocalCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+LocalCache.swift"; sourceTree = "<group>"; };
 		59D8251A1B86DB270094F558 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59D8251C1B86DB270094F558 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		59D8251E1B86DB270094F558 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -72,20 +72,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		591F3E8F1B8714F800D5388D /* HYLImageManager */ = {
+		591F3E971B8715EC00D5388D /* HYLMultiImagesViewController */ = {
 			isa = PBXGroup;
 			children = (
-				591F3E901B8714F800D5388D /* HYLFileManager */,
-				591F3E931B8714F800D5388D /* HYLImageManager.swift */,
+				591F3E981B8715EC00D5388D /* HYLImageCachedDownloader.swift */,
+				591F3E991B8715EC00D5388D /* HYLImageManager */,
+				591F3E9E1B8715EC00D5388D /* HYLImageScrollViewController.swift */,
+				591F3E9F1B8715EC00D5388D /* HYLMultiImagesViewController.swift */,
+				591F3EA01B8715EC00D5388D /* String+MD5.swift */,
+				591F3EA11B8715EC00D5388D /* UIImageView+LocalCache.swift */,
+			);
+			path = HYLMultiImagesViewController;
+			sourceTree = "<group>";
+		};
+		591F3E991B8715EC00D5388D /* HYLImageManager */ = {
+			isa = PBXGroup;
+			children = (
+				591F3E9A1B8715EC00D5388D /* HYLFileManager */,
+				591F3E9D1B8715EC00D5388D /* HYLImageManager.swift */,
 			);
 			path = HYLImageManager;
 			sourceTree = "<group>";
 		};
-		591F3E901B8714F800D5388D /* HYLFileManager */ = {
+		591F3E9A1B8715EC00D5388D /* HYLFileManager */ = {
 			isa = PBXGroup;
 			children = (
-				591F3E911B8714F800D5388D /* HYLFileManager.swift */,
-				591F3E921B8714F800D5388D /* UIImage+Compress.swift */,
+				591F3E9B1B8715EC00D5388D /* HYLFileManager.swift */,
+				591F3E9C1B8715EC00D5388D /* UIImage+Compress.swift */,
 			);
 			path = HYLFileManager;
 			sourceTree = "<group>";
@@ -93,7 +106,7 @@
 		59A518291B82D64F003B533A = {
 			isa = PBXGroup;
 			children = (
-				59D824F81B86D9380094F558 /* HYLMultiImagesViewController */,
+				591F3E971B8715EC00D5388D /* HYLMultiImagesViewController */,
 				59D825191B86DB270094F558 /* HYLMultiImagesViewControllerDemo */,
 				59A5184A1B82D650003B533A /* HYLImageViewControllerTests */,
 				59A518331B82D64F003B533A /* Products */,
@@ -124,19 +137,6 @@
 				59A5184C1B82D650003B533A /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		59D824F81B86D9380094F558 /* HYLMultiImagesViewController */ = {
-			isa = PBXGroup;
-			children = (
-				591F3E8F1B8714F800D5388D /* HYLImageManager */,
-				59D824F91B86D9380094F558 /* HYLImageCachedDownloader.swift */,
-				59D824FA1B86D9380094F558 /* HYLImageScrollViewController.swift */,
-				59D824FB1B86D9380094F558 /* HYLMultiImagesViewController.swift */,
-				59D824FC1B86D9380094F558 /* String+MD5.swift */,
-				59D824FD1B86D9380094F558 /* UIImageView+LocalCache.swift */,
-			);
-			path = HYLMultiImagesViewController;
 			sourceTree = "<group>";
 		};
 		59D825191B86DB270094F558 /* HYLMultiImagesViewControllerDemo */ = {
@@ -252,16 +252,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				591F3EA21B8715EC00D5388D /* HYLImageCachedDownloader.swift in Sources */,
+				591F3EA91B8715EC00D5388D /* UIImageView+LocalCache.swift in Sources */,
+				591F3EA61B8715EC00D5388D /* HYLImageScrollViewController.swift in Sources */,
+				591F3EA71B8715EC00D5388D /* HYLMultiImagesViewController.swift in Sources */,
+				591F3EA81B8715EC00D5388D /* String+MD5.swift in Sources */,
+				591F3EA51B8715EC00D5388D /* HYLImageManager.swift in Sources */,
+				591F3EA41B8715EC00D5388D /* UIImage+Compress.swift in Sources */,
 				59D825281B86DB270094F558 /* ViewController.swift in Sources */,
-				591F3E961B8714F800D5388D /* HYLImageManager.swift in Sources */,
-				59D824FE1B86D9380094F558 /* HYLImageCachedDownloader.swift in Sources */,
-				59D825001B86D9380094F558 /* HYLMultiImagesViewController.swift in Sources */,
 				59D825231B86DB270094F558 /* AppDelegate.swift in Sources */,
-				59D824FF1B86D9380094F558 /* HYLImageScrollViewController.swift in Sources */,
-				59D825011B86D9380094F558 /* String+MD5.swift in Sources */,
-				59D825021B86D9380094F558 /* UIImageView+LocalCache.swift in Sources */,
-				591F3E951B8714F800D5388D /* UIImage+Compress.swift in Sources */,
-				591F3E941B8714F800D5388D /* HYLFileManager.swift in Sources */,
+				591F3EA31B8715EC00D5388D /* HYLFileManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
