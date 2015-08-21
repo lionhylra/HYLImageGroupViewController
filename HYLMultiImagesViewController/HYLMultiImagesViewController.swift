@@ -18,7 +18,7 @@ class HYLMultiImagesViewController: UIViewController, UIScrollViewDelegate {
     private let pageControl:UIPageControl = UIPageControl()
     private var images:[UIImage?]?
     private var imageURLs:[NSURL?]?
-    
+    private var subViewControllers:[HYLImageScrollViewController?]!
     // MARK: - Public Properties
     var currentPage:Int = 0 {
         didSet{
@@ -45,6 +45,7 @@ class HYLMultiImagesViewController: UIViewController, UIScrollViewDelegate {
     convenience init(images:[UIImage?]){
         self.init()
         self.images = images
+        self.subViewControllers = Array(count: images.count, repeatedValue: nil)
     }
     
     convenience init(imageURLs:[NSURL?], placeHolderImages:[UIImage?]?){
@@ -53,6 +54,7 @@ class HYLMultiImagesViewController: UIViewController, UIScrollViewDelegate {
         if let placeHolders = placeHolderImages {
             self.images = placeHolders
         }
+        self.subViewControllers = Array(count: imageURLs.count, repeatedValue: nil)
     }
     
     //MARK: - UIViewController Life Circle
@@ -108,7 +110,7 @@ class HYLMultiImagesViewController: UIViewController, UIScrollViewDelegate {
         let position = self.scrollView.contentOffset.x / pageWidth
         let newPage = lroundf(Float(position))
         let positionInPage = (self.scrollView.contentOffset.x % pageWidth)/pageWidth//This is for improve user experience, to delay the update of the image
-        if (newPage != self.currentPage) && ( positionInPage < 0.1 || positionInPage > 0.9){
+        if (newPage != self.currentPage) && ( positionInPage < 0.05 || positionInPage > 0.95){
             self.currentPage = newPage
             self.loadVisiblePages()
         }
@@ -156,8 +158,8 @@ class HYLMultiImagesViewController: UIViewController, UIScrollViewDelegate {
     
     private func loadVisiblePages(){
         let page = self.currentPage
-        let previousPage = page - 1
-        let nextPage = page + 1
+        let previousPage = page - 1 < 0 ? 0 : page - 1
+        let nextPage = page + 1 >= self.imagesCount ? self.imagesCount-1 : page + 1
         
         /* Update page control */
         self.pageControl.currentPage = page
@@ -168,16 +170,22 @@ class HYLMultiImagesViewController: UIViewController, UIScrollViewDelegate {
     
     private func loadPage(#prev:Int, currentPage:Int, next:Int){
         /* clear views */
-        let subViews:[UIView] = self.scrollView.subviews as! [UIView]
-        for view in subViews {
-            view.removeFromSuperview()
+        for i in 0 ..< prev {
+            if let vc = self.subViewControllers[i] {
+                vc.removeFromParentViewController()
+                vc.view.removeFromSuperview()
+            }
+            self.subViewControllers[i] = nil
         }
         
-        /* clear viewControllers */
-        let childViweControllers = self.childViewControllers
-        for vc in childViewControllers {
-            vc.removeFromParentViewController()
+        for i in (next+1) ..< self.subViewControllers.count {
+            if let vc = self.subViewControllers[i] {
+                vc.removeFromParentViewController()
+                vc.view.removeFromSuperview()
+            }
+            self.subViewControllers[i] = nil
         }
+        
         
         func addPage(page:Int){
             /* check page availability */
@@ -194,6 +202,7 @@ class HYLMultiImagesViewController: UIViewController, UIScrollViewDelegate {
                 subViewController.view.frame = frame
                 self.scrollView.addSubview(subViewController.view)
                 self.addChildViewController(subViewController)
+                self.subViewControllers[page] = subViewController
                 return
             }
             /* create image view */
@@ -209,19 +218,8 @@ class HYLMultiImagesViewController: UIViewController, UIScrollViewDelegate {
                 subViewController.view.frame = frame
                 self.scrollView.addSubview(subViewController.view)
                 self.addChildViewController(subViewController)
-                
-//                if self.imageURLs != nil {
-//                    let queue = NSOperationQueue()
-//                    queue.addOperationWithBlock(){
-//                        let data = NSData(contentsOfURL: self.imageURLs![page]!)
-//                        if data != nil {
-//                            NSOperationQueue.mainQueue().addOperationWithBlock(){
-//                                let image = UIImage(data: data!)
-//                                subViewController.image = image
-//                            }
-//                        }
-//                    }
-//                }
+                self.subViewControllers[page] = subViewController
+
             }
             
             
@@ -229,7 +227,7 @@ class HYLMultiImagesViewController: UIViewController, UIScrollViewDelegate {
         }
         
         addPage(prev)
-        addPage(currentPage)
+//        addPage(currentPage)
         addPage(next)
     }
 
