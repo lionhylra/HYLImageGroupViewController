@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 HeYilei. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public typealias ProgressBlock = ((receivedSize: Int64, totalSize: Int64) -> ())
 public typealias CompletionBlock = ((image:UIImage?, error:NSError?, imageURL:NSURL?)->())
@@ -100,7 +100,7 @@ class ImageDownloader: NSObject,NSURLSessionDownloadDelegate, NSURLSessionTaskDe
         let destinationPath:String
         let destinationURL:NSURL
         if let url = downloadTask.originalRequest.URL, fileName = self.fileNameForURL(url) {
-            destinationPath = self.imageManager.pathForImageName(fileName)
+            destinationPath = self.imageManager.pathForImageName(fileName)!
             destinationURL = NSURL(fileURLWithPath: destinationPath)!
         }else{
             return
