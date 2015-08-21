@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Kingfisher
+//import Kingfisher
 
 class HYLImageScrollViewController: UIViewController, UIScrollViewDelegate {
     
@@ -145,13 +145,21 @@ class HYLImageScrollViewController: UIViewController, UIScrollViewDelegate {
     
     private func configureImageView(){
         if self.imageURL != nil{
-            self.imageView.kf_setImageWithURL(self.imageURL!, placeholderImage: self.image, optionsInfo: nil, completionHandler: { (image, error, cacheType, imageURL) -> () in
+//            self.imageView.kf_setImageWithURL(self.imageURL!, placeholderImage: self.image, optionsInfo: nil, completionHandler: { (image, error, cacheType, imageURL) -> () in
+//                self.image = image
+//                if let imageSize = self.image?.size {
+//                    self.imageView.frame = CGRect(origin: CGPointZero, size: imageSize)
+//                }
+//                self.configureScrollView()
+//                self.loadingDidComplete()
+//            })
+            self.imageView.setImageWithURL(self.imageURL!, placeholderImage: self.image, completionBlock: { (image, error, imageURL) -> () in
                 self.image = image
                 if let imageSize = self.image?.size {
                     self.imageView.frame = CGRect(origin: CGPointZero, size: imageSize)
+                    self.configureScrollView()
+                    self.loadingDidComplete()
                 }
-                self.configureScrollView()
-                self.loadingDidComplete()
             })
         }else{
             self.imageView.image = self.image
