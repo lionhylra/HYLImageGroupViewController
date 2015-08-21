@@ -22,7 +22,6 @@
 		59A5183F1B82D64F003B533A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59A5183E1B82D64F003B533A /* Images.xcassets */; };
 		59A5184E1B82D650003B533A /* HYLImageViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A5184D1B82D650003B533A /* HYLImageViewControllerTests.swift */; };
 		59A5185A1B82DEC4003B533A /* HYLMultiImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A518591B82DEC4003B533A /* HYLMultiImagesViewController.swift */; };
-		6A65ED4D728EE3B6FB393743 /* Pods_HYLImageViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AB52DF6B15C4CAF39FD5736 /* Pods_HYLImageViewController.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,9 +59,6 @@
 		59A5184C1B82D650003B533A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59A5184D1B82D650003B533A /* HYLImageViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYLImageViewControllerTests.swift; sourceTree = "<group>"; };
 		59A518591B82DEC4003B533A /* HYLMultiImagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYLMultiImagesViewController.swift; sourceTree = "<group>"; };
-		5AB52DF6B15C4CAF39FD5736 /* Pods_HYLImageViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HYLImageViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		89638ABCFE23E27F1BB03EED /* Pods-HYLImageViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HYLImageViewController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HYLImageViewController/Pods-HYLImageViewController.debug.xcconfig"; sourceTree = "<group>"; };
-		C7E7B1C25875B70AED88A1A4 /* Pods-HYLImageViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HYLImageViewController.release.xcconfig"; path = "Pods/Target Support Files/Pods-HYLImageViewController/Pods-HYLImageViewController.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +66,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A65ED4D728EE3B6FB393743 /* Pods_HYLImageViewController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,15 +79,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		04142BE4DCAA1D154AC6F955 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				89638ABCFE23E27F1BB03EED /* Pods-HYLImageViewController.debug.xcconfig */,
-				C7E7B1C25875B70AED88A1A4 /* Pods-HYLImageViewController.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		5948D3F61B85B83100136632 /* HYLFileManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,8 +109,6 @@
 				59A518341B82D64F003B533A /* HYLImageViewController */,
 				59A5184A1B82D650003B533A /* HYLImageViewControllerTests */,
 				59A518331B82D64F003B533A /* Products */,
-				04142BE4DCAA1D154AC6F955 /* Pods */,
-				BD68C0FE9CECB84B0D7EE071 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -181,14 +165,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		BD68C0FE9CECB84B0D7EE071 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5AB52DF6B15C4CAF39FD5736 /* Pods_HYLImageViewController.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -196,12 +172,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 59A518511B82D650003B533A /* Build configuration list for PBXNativeTarget "HYLImageViewController" */;
 			buildPhases = (
-				DB0340350262390550C3676F /* Check Pods Manifest.lock */,
 				59A5182E1B82D64F003B533A /* Sources */,
 				59A5182F1B82D64F003B533A /* Frameworks */,
 				59A518301B82D64F003B533A /* Resources */,
-				10BF9FF1378FAC3A4D083AFD /* Embed Pods Frameworks */,
-				3C128AFE8D6AAE3AE8A39C8B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -286,54 +259,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		10BF9FF1378FAC3A4D083AFD /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HYLImageViewController/Pods-HYLImageViewController-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3C128AFE8D6AAE3AE8A39C8B /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HYLImageViewController/Pods-HYLImageViewController-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DB0340350262390550C3676F /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		59A5182E1B82D64F003B533A /* Sources */ = {
@@ -477,7 +402,6 @@
 		};
 		59A518521B82D650003B533A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89638ABCFE23E27F1BB03EED /* Pods-HYLImageViewController.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HYLImageViewController/Info.plist;
@@ -489,7 +413,6 @@
 		};
 		59A518531B82D650003B533A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C7E7B1C25875B70AED88A1A4 /* Pods-HYLImageViewController.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HYLImageViewController/Info.plist;
