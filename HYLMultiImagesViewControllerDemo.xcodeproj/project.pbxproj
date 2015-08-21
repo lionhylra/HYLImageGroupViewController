@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		591F3E8A1B86EDB900D5388D /* HYLFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591F3E891B86EDB900D5388D /* HYLFileManager.swift */; };
-		591F3E8C1B86FC1400D5388D /* UIImage+Compress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591F3E8B1B86FC1400D5388D /* UIImage+Compress.swift */; };
-		591F3E8E1B87024500D5388D /* HYLImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591F3E8D1B87024500D5388D /* HYLImageManager.swift */; };
+		591F3E941B8714F800D5388D /* HYLFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591F3E911B8714F800D5388D /* HYLFileManager.swift */; };
+		591F3E951B8714F800D5388D /* UIImage+Compress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591F3E921B8714F800D5388D /* UIImage+Compress.swift */; };
+		591F3E961B8714F800D5388D /* HYLImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591F3E931B8714F800D5388D /* HYLImageManager.swift */; };
 		59A5184E1B82D650003B533A /* HYLImageViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A5184D1B82D650003B533A /* HYLImageViewControllerTests.swift */; };
 		59D824FE1B86D9380094F558 /* HYLImageCachedDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D824F91B86D9380094F558 /* HYLImageCachedDownloader.swift */; };
 		59D824FF1B86D9380094F558 /* HYLImageScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D824FA1B86D9380094F558 /* HYLImageScrollViewController.swift */; };
@@ -34,9 +34,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		591F3E891B86EDB900D5388D /* HYLFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYLFileManager.swift; sourceTree = "<group>"; };
-		591F3E8B1B86FC1400D5388D /* UIImage+Compress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Compress.swift"; sourceTree = "<group>"; };
-		591F3E8D1B87024500D5388D /* HYLImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYLImageManager.swift; sourceTree = "<group>"; };
+		591F3E911B8714F800D5388D /* HYLFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYLFileManager.swift; sourceTree = "<group>"; };
+		591F3E921B8714F800D5388D /* UIImage+Compress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Compress.swift"; sourceTree = "<group>"; };
+		591F3E931B8714F800D5388D /* HYLImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYLImageManager.swift; sourceTree = "<group>"; };
 		59A518321B82D64F003B533A /* HYLMultiImagesViewControllerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HYLMultiImagesViewControllerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59A518471B82D650003B533A /* HYLMultiImagesViewControllerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HYLMultiImagesViewControllerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		59A5184C1B82D650003B533A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -72,11 +72,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		591F3E8F1B8714F800D5388D /* HYLImageManager */ = {
+			isa = PBXGroup;
+			children = (
+				591F3E901B8714F800D5388D /* HYLFileManager */,
+				591F3E931B8714F800D5388D /* HYLImageManager.swift */,
+			);
+			path = HYLImageManager;
+			sourceTree = "<group>";
+		};
+		591F3E901B8714F800D5388D /* HYLFileManager */ = {
+			isa = PBXGroup;
+			children = (
+				591F3E911B8714F800D5388D /* HYLFileManager.swift */,
+				591F3E921B8714F800D5388D /* UIImage+Compress.swift */,
+			);
+			path = HYLFileManager;
+			sourceTree = "<group>";
+		};
 		59A518291B82D64F003B533A = {
 			isa = PBXGroup;
 			children = (
 				59D824F81B86D9380094F558 /* HYLMultiImagesViewController */,
-				59D825031B86DA6A0094F558 /* HYLImageManager */,
 				59D825191B86DB270094F558 /* HYLMultiImagesViewControllerDemo */,
 				59A5184A1B82D650003B533A /* HYLImageViewControllerTests */,
 				59A518331B82D64F003B533A /* Products */,
@@ -112,6 +129,7 @@
 		59D824F81B86D9380094F558 /* HYLMultiImagesViewController */ = {
 			isa = PBXGroup;
 			children = (
+				591F3E8F1B8714F800D5388D /* HYLImageManager */,
 				59D824F91B86D9380094F558 /* HYLImageCachedDownloader.swift */,
 				59D824FA1B86D9380094F558 /* HYLImageScrollViewController.swift */,
 				59D824FB1B86D9380094F558 /* HYLMultiImagesViewController.swift */,
@@ -119,24 +137,6 @@
 				59D824FD1B86D9380094F558 /* UIImageView+LocalCache.swift */,
 			);
 			path = HYLMultiImagesViewController;
-			sourceTree = "<group>";
-		};
-		59D825031B86DA6A0094F558 /* HYLImageManager */ = {
-			isa = PBXGroup;
-			children = (
-				59D825041B86DA6A0094F558 /* HYLFileManager */,
-				591F3E8D1B87024500D5388D /* HYLImageManager.swift */,
-			);
-			path = HYLImageManager;
-			sourceTree = "<group>";
-		};
-		59D825041B86DA6A0094F558 /* HYLFileManager */ = {
-			isa = PBXGroup;
-			children = (
-				591F3E891B86EDB900D5388D /* HYLFileManager.swift */,
-				591F3E8B1B86FC1400D5388D /* UIImage+Compress.swift */,
-			);
-			path = HYLFileManager;
 			sourceTree = "<group>";
 		};
 		59D825191B86DB270094F558 /* HYLMultiImagesViewControllerDemo */ = {
@@ -253,15 +253,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				59D825281B86DB270094F558 /* ViewController.swift in Sources */,
-				591F3E8C1B86FC1400D5388D /* UIImage+Compress.swift in Sources */,
+				591F3E961B8714F800D5388D /* HYLImageManager.swift in Sources */,
 				59D824FE1B86D9380094F558 /* HYLImageCachedDownloader.swift in Sources */,
 				59D825001B86D9380094F558 /* HYLMultiImagesViewController.swift in Sources */,
-				591F3E8E1B87024500D5388D /* HYLImageManager.swift in Sources */,
 				59D825231B86DB270094F558 /* AppDelegate.swift in Sources */,
 				59D824FF1B86D9380094F558 /* HYLImageScrollViewController.swift in Sources */,
 				59D825011B86D9380094F558 /* String+MD5.swift in Sources */,
 				59D825021B86D9380094F558 /* UIImageView+LocalCache.swift in Sources */,
-				591F3E8A1B86EDB900D5388D /* HYLFileManager.swift in Sources */,
+				591F3E951B8714F800D5388D /* UIImage+Compress.swift in Sources */,
+				591F3E941B8714F800D5388D /* HYLFileManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
