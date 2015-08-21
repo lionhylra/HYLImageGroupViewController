@@ -7,21 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5948D3B11B840C2400136632 /* HYLImageScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5948D3B01B840C2400136632 /* HYLImageScrollViewController.swift */; };
 		5948D3B21B84854600136632 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59A5183B1B82D64F003B533A /* Main.storyboard */; };
 		5948D3B31B84854C00136632 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59A518401B82D64F003B533A /* LaunchScreen.xib */; };
-		5948D3F51B85814200136632 /* UIImageView+LocalCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5948D3F41B85814200136632 /* UIImageView+LocalCache.swift */; };
 		5948D4001B85B83100136632 /* HYLDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5948D3F81B85B83100136632 /* HYLDownloadManager.m */; };
 		5948D4011B85B83100136632 /* HYLFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5948D3FA1B85B83100136632 /* HYLFileManager.m */; };
 		5948D4021B85B83100136632 /* UIImage+Compress.m in Sources */ = {isa = PBXBuildFile; fileRef = 5948D3FC1B85B83100136632 /* UIImage+Compress.m */; };
 		5948D4031B85B83100136632 /* HYLImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5948D3FF1B85B83100136632 /* HYLImageManager.m */; };
-		5948D4061B86B2EE00136632 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5948D4051B86B2EE00136632 /* String+MD5.swift */; };
-		5948D4081B86CC4100136632 /* HYLImageCachedDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5948D4071B86CC4100136632 /* HYLImageCachedDownloader.swift */; };
 		59A518381B82D64F003B533A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A518371B82D64F003B533A /* AppDelegate.swift */; };
 		59A5183A1B82D64F003B533A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A518391B82D64F003B533A /* ViewController.swift */; };
 		59A5183F1B82D64F003B533A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59A5183E1B82D64F003B533A /* Images.xcassets */; };
 		59A5184E1B82D650003B533A /* HYLImageViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A5184D1B82D650003B533A /* HYLImageViewControllerTests.swift */; };
-		59A5185A1B82DEC4003B533A /* HYLMultiImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A518591B82DEC4003B533A /* HYLMultiImagesViewController.swift */; };
+		59D824FE1B86D9380094F558 /* HYLImageCachedDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D824F91B86D9380094F558 /* HYLImageCachedDownloader.swift */; };
+		59D824FF1B86D9380094F558 /* HYLImageScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D824FA1B86D9380094F558 /* HYLImageScrollViewController.swift */; };
+		59D825001B86D9380094F558 /* HYLMultiImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D824FB1B86D9380094F558 /* HYLMultiImagesViewController.swift */; };
+		59D825011B86D9380094F558 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D824FC1B86D9380094F558 /* String+MD5.swift */; };
+		59D825021B86D9380094F558 /* UIImageView+LocalCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D824FD1B86D9380094F558 /* UIImageView+LocalCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,8 +35,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5948D3B01B840C2400136632 /* HYLImageScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYLImageScrollViewController.swift; sourceTree = "<group>"; };
-		5948D3F41B85814200136632 /* UIImageView+LocalCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+LocalCache.swift"; sourceTree = "<group>"; };
 		5948D3F71B85B83100136632 /* HYLDownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYLDownloadManager.h; sourceTree = "<group>"; };
 		5948D3F81B85B83100136632 /* HYLDownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYLDownloadManager.m; sourceTree = "<group>"; };
 		5948D3F91B85B83100136632 /* HYLFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYLFileManager.h; sourceTree = "<group>"; };
@@ -46,19 +44,21 @@
 		5948D3FE1B85B83100136632 /* HYLImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYLImageManager.h; sourceTree = "<group>"; };
 		5948D3FF1B85B83100136632 /* HYLImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYLImageManager.m; sourceTree = "<group>"; };
 		5948D4041B85B84E00136632 /* HYLImageViewControllerDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HYLImageViewControllerDemo-Bridging-Header.h"; sourceTree = "<group>"; };
-		5948D4051B86B2EE00136632 /* String+MD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+MD5.swift"; sourceTree = "<group>"; };
-		5948D4071B86CC4100136632 /* HYLImageCachedDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYLImageCachedDownloader.swift; sourceTree = "<group>"; };
-		59A518321B82D64F003B533A /* HYLImageViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HYLImageViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		59A518321B82D64F003B533A /* HYLMultiImagesViewControllerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HYLMultiImagesViewControllerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59A518361B82D64F003B533A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59A518371B82D64F003B533A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59A518391B82D64F003B533A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		59A5183C1B82D64F003B533A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		59A5183E1B82D64F003B533A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		59A518411B82D64F003B533A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		59A518471B82D650003B533A /* HYLImageViewControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HYLImageViewControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		59A518471B82D650003B533A /* HYLMultiImagesViewControllerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HYLMultiImagesViewControllerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		59A5184C1B82D650003B533A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59A5184D1B82D650003B533A /* HYLImageViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYLImageViewControllerTests.swift; sourceTree = "<group>"; };
-		59A518591B82DEC4003B533A /* HYLMultiImagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYLMultiImagesViewController.swift; sourceTree = "<group>"; };
+		59D824F91B86D9380094F558 /* HYLImageCachedDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYLImageCachedDownloader.swift; sourceTree = "<group>"; };
+		59D824FA1B86D9380094F558 /* HYLImageScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYLImageScrollViewController.swift; sourceTree = "<group>"; };
+		59D824FB1B86D9380094F558 /* HYLMultiImagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYLMultiImagesViewController.swift; sourceTree = "<group>"; };
+		59D824FC1B86D9380094F558 /* String+MD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+MD5.swift"; sourceTree = "<group>"; };
+		59D824FD1B86D9380094F558 /* UIImageView+LocalCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+LocalCache.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +104,7 @@
 		59A518291B82D64F003B533A = {
 			isa = PBXGroup;
 			children = (
+				59D824F81B86D9380094F558 /* HYLMultiImagesViewController */,
 				5948D3F61B85B83100136632 /* HYLFileManager */,
 				5948D3FD1B85B83100136632 /* HYLImageManager */,
 				59A518341B82D64F003B533A /* HYLImageViewController */,
@@ -115,8 +116,8 @@
 		59A518331B82D64F003B533A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				59A518321B82D64F003B533A /* HYLImageViewController.app */,
-				59A518471B82D650003B533A /* HYLImageViewControllerTests.xctest */,
+				59A518321B82D64F003B533A /* HYLMultiImagesViewControllerDemo.app */,
+				59A518471B82D650003B533A /* HYLMultiImagesViewControllerDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,12 +131,7 @@
 				59A5183E1B82D64F003B533A /* Images.xcassets */,
 				59A518401B82D64F003B533A /* LaunchScreen.xib */,
 				59A518351B82D64F003B533A /* Supporting Files */,
-				59A518591B82DEC4003B533A /* HYLMultiImagesViewController.swift */,
-				5948D3B01B840C2400136632 /* HYLImageScrollViewController.swift */,
-				5948D3F41B85814200136632 /* UIImageView+LocalCache.swift */,
-				5948D4071B86CC4100136632 /* HYLImageCachedDownloader.swift */,
 				5948D4041B85B84E00136632 /* HYLImageViewControllerDemo-Bridging-Header.h */,
-				5948D4051B86B2EE00136632 /* String+MD5.swift */,
 			);
 			path = HYLImageViewController;
 			sourceTree = "<group>";
@@ -165,12 +161,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		59D824F81B86D9380094F558 /* HYLMultiImagesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				59D824F91B86D9380094F558 /* HYLImageCachedDownloader.swift */,
+				59D824FA1B86D9380094F558 /* HYLImageScrollViewController.swift */,
+				59D824FB1B86D9380094F558 /* HYLMultiImagesViewController.swift */,
+				59D824FC1B86D9380094F558 /* String+MD5.swift */,
+				59D824FD1B86D9380094F558 /* UIImageView+LocalCache.swift */,
+			);
+			path = HYLMultiImagesViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		59A518311B82D64F003B533A /* HYLImageViewController */ = {
+		59A518311B82D64F003B533A /* HYLMultiImagesViewControllerDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 59A518511B82D650003B533A /* Build configuration list for PBXNativeTarget "HYLImageViewController" */;
+			buildConfigurationList = 59A518511B82D650003B533A /* Build configuration list for PBXNativeTarget "HYLMultiImagesViewControllerDemo" */;
 			buildPhases = (
 				59A5182E1B82D64F003B533A /* Sources */,
 				59A5182F1B82D64F003B533A /* Frameworks */,
@@ -180,14 +188,14 @@
 			);
 			dependencies = (
 			);
-			name = HYLImageViewController;
+			name = HYLMultiImagesViewControllerDemo;
 			productName = HYLImageViewController;
-			productReference = 59A518321B82D64F003B533A /* HYLImageViewController.app */;
+			productReference = 59A518321B82D64F003B533A /* HYLMultiImagesViewControllerDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		59A518461B82D650003B533A /* HYLImageViewControllerTests */ = {
+		59A518461B82D650003B533A /* HYLMultiImagesViewControllerDemoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 59A518541B82D650003B533A /* Build configuration list for PBXNativeTarget "HYLImageViewControllerTests" */;
+			buildConfigurationList = 59A518541B82D650003B533A /* Build configuration list for PBXNativeTarget "HYLMultiImagesViewControllerDemoTests" */;
 			buildPhases = (
 				59A518431B82D650003B533A /* Sources */,
 				59A518441B82D650003B533A /* Frameworks */,
@@ -198,9 +206,9 @@
 			dependencies = (
 				59A518491B82D650003B533A /* PBXTargetDependency */,
 			);
-			name = HYLImageViewControllerTests;
+			name = HYLMultiImagesViewControllerDemoTests;
 			productName = HYLImageViewControllerTests;
-			productReference = 59A518471B82D650003B533A /* HYLImageViewControllerTests.xctest */;
+			productReference = 59A518471B82D650003B533A /* HYLMultiImagesViewControllerDemoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -221,7 +229,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 59A5182D1B82D64F003B533A /* Build configuration list for PBXProject "HYLImageViewController" */;
+			buildConfigurationList = 59A5182D1B82D64F003B533A /* Build configuration list for PBXProject "HYLMultiImagesViewControllerDemo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -234,8 +242,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				59A518311B82D64F003B533A /* HYLImageViewController */,
-				59A518461B82D650003B533A /* HYLImageViewControllerTests */,
+				59A518311B82D64F003B533A /* HYLMultiImagesViewControllerDemo */,
+				59A518461B82D650003B533A /* HYLMultiImagesViewControllerDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -265,16 +273,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59D824FE1B86D9380094F558 /* HYLImageCachedDownloader.swift in Sources */,
 				5948D4011B85B83100136632 /* HYLFileManager.m in Sources */,
+				59D825001B86D9380094F558 /* HYLMultiImagesViewController.swift in Sources */,
 				59A5183A1B82D64F003B533A /* ViewController.swift in Sources */,
-				5948D3F51B85814200136632 /* UIImageView+LocalCache.swift in Sources */,
-				5948D3B11B840C2400136632 /* HYLImageScrollViewController.swift in Sources */,
+				59D824FF1B86D9380094F558 /* HYLImageScrollViewController.swift in Sources */,
 				5948D4001B85B83100136632 /* HYLDownloadManager.m in Sources */,
 				5948D4031B85B83100136632 /* HYLImageManager.m in Sources */,
 				5948D4021B85B83100136632 /* UIImage+Compress.m in Sources */,
-				5948D4081B86CC4100136632 /* HYLImageCachedDownloader.swift in Sources */,
-				5948D4061B86B2EE00136632 /* String+MD5.swift in Sources */,
-				59A5185A1B82DEC4003B533A /* HYLMultiImagesViewController.swift in Sources */,
+				59D825011B86D9380094F558 /* String+MD5.swift in Sources */,
+				59D825021B86D9380094F558 /* UIImageView+LocalCache.swift in Sources */,
 				59A518381B82D64F003B533A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,7 +300,7 @@
 /* Begin PBXTargetDependency section */
 		59A518491B82D650003B533A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 59A518311B82D64F003B533A /* HYLImageViewController */;
+			target = 59A518311B82D64F003B533A /* HYLMultiImagesViewControllerDemo */;
 			targetProxy = 59A518481B82D650003B533A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -406,7 +414,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HYLImageViewController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = HYLMultiImagesViewControllerDemo;
 				SWIFT_OBJC_BRIDGING_HEADER = "./HYLImageViewController/HYLImageViewControllerDemo-Bridging-Header.h";
 			};
 			name = Debug;
@@ -417,7 +425,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HYLImageViewController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = HYLMultiImagesViewControllerDemo;
 				SWIFT_OBJC_BRIDGING_HEADER = "./HYLImageViewController/HYLImageViewControllerDemo-Bridging-Header.h";
 			};
 			name = Release;
@@ -436,7 +444,7 @@
 				);
 				INFOPLIST_FILE = HYLImageViewControllerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = HYLMultiImagesViewControllerDemoTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HYLImageViewController.app/HYLImageViewController";
 			};
 			name = Debug;
@@ -451,7 +459,7 @@
 				);
 				INFOPLIST_FILE = HYLImageViewControllerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = HYLMultiImagesViewControllerDemoTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HYLImageViewController.app/HYLImageViewController";
 			};
 			name = Release;
@@ -459,7 +467,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		59A5182D1B82D64F003B533A /* Build configuration list for PBXProject "HYLImageViewController" */ = {
+		59A5182D1B82D64F003B533A /* Build configuration list for PBXProject "HYLMultiImagesViewControllerDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				59A5184F1B82D650003B533A /* Debug */,
@@ -468,7 +476,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		59A518511B82D650003B533A /* Build configuration list for PBXNativeTarget "HYLImageViewController" */ = {
+		59A518511B82D650003B533A /* Build configuration list for PBXNativeTarget "HYLMultiImagesViewControllerDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				59A518521B82D650003B533A /* Debug */,
@@ -477,7 +485,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		59A518541B82D650003B533A /* Build configuration list for PBXNativeTarget "HYLImageViewControllerTests" */ = {
+		59A518541B82D650003B533A /* Build configuration list for PBXNativeTarget "HYLMultiImagesViewControllerDemoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				59A518551B82D650003B533A /* Debug */,
