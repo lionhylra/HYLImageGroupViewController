@@ -53,6 +53,7 @@ You can specify the start page after initializing the view controller:
 viewController.currentPage = 2//it will open from the third image
 ```
 **Objective-c**
+
 Same API, just the code style is changed
 ```objective-c
 HYLImageGroupViewController *vc = [[HYLImageGroupViewController alloc] initWithImageURLs:urls placeHolderImages:placeholder];
