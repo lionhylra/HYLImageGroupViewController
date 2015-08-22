@@ -449,6 +449,7 @@
 				591F3F351B88712000D5388D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		591F3F361B88712000D5388D /* Build configuration list for PBXNativeTarget "swiftDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -457,6 +458,7 @@
 				591F3F381B88712000D5388D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

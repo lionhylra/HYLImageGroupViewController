@@ -25,7 +25,7 @@ extension UIImageView {
     
     func setImageWithURL(url:NSURL, placeholderImage: UIImage?, progressBlock:ProgressBlock?,completionBlock:CompletionBlock?){
         /* if the image is cached */
-        let imageDownloader = ImageDownloader(progressBlock: progressBlock) {[unowned self] (image, error, imageURL) -> () in
+        let imageDownloader = HYLImageDownloader(progressBlock: progressBlock) {[unowned self] (image, error, imageURL) -> () in
             self.image = image
             if let completionHandler = completionBlock {
                 completionHandler(image: image, error: error, imageURL: imageURL)

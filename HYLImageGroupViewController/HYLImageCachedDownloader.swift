@@ -26,7 +26,7 @@ func synchronizd(lock: AnyObject, closure:()->()) {
     objc_sync_exit(lock);
 }
 
-class ImageCache:NSCache,HYLImageMemoryCache{
+class HYLImageCache:NSCache,HYLImageMemoryCache{
     func cachedImageForURL(url: NSURL) -> UIImage? {
         if let key = url.absoluteString{
             return self.objectForKey(key) as? UIImage
@@ -43,7 +43,7 @@ class ImageCache:NSCache,HYLImageMemoryCache{
     
 }
 
-public class ImageDownloader: NSObject,NSURLSessionDownloadDelegate, NSURLSessionTaskDelegate, HYLImageFileCache{
+public class HYLImageDownloader: NSObject,NSURLSessionDownloadDelegate, NSURLSessionTaskDelegate, HYLImageFileCache{
     // MARK: - Properties
     lazy private var downloadSession:NSURLSession = {
         let config = NSURLSessionConfiguration.defaultSessionConfiguration()
@@ -51,8 +51,8 @@ public class ImageDownloader: NSObject,NSURLSessionDownloadDelegate, NSURLSessio
         }()
     
     lazy private var imageManager = HYLImageManager(directory: NSSearchPathDirectory.CachesDirectory, pathComponents: ["com.HYLMultiImagesViewController.Caches"])
-    static private let imageCache = {()->ImageCache in
-        let cache = ImageCache()
+    static private let imageCache = {()->HYLImageCache in
+        let cache = HYLImageCache()
         NSNotificationCenter.defaultCenter().addObserverForName(UIApplicationDidReceiveMemoryWarningNotification, object: nil, queue: NSOperationQueue.mainQueue(), usingBlock: { (notification) -> Void in
             cache.removeAllObjects()
         })
@@ -78,10 +78,10 @@ public class ImageDownloader: NSObject,NSURLSessionDownloadDelegate, NSURLSessio
     
     public func retrieveImageForURL(url:NSURL) -> UIImage?{
         if let fileName = self.fileNameForURL(url) {
-            if let image = ImageDownloader.imageCache.cachedImageForURL(url) {
+            if let image = HYLImageDownloader.imageCache.cachedImageForURL(url) {
                 return image
             }else if let image = self.imageManager.imageWithName(fileName) {
-                ImageDownloader.imageCache.cacheImage(image, withURL: url)
+                HYLImageDownloader.imageCache.cacheImage(image, withURL: url)
                 return image
             }else{
                 self.downloadFileWithURL(url)
@@ -146,7 +146,7 @@ public class ImageDownloader: NSObject,NSURLSessionDownloadDelegate, NSURLSessio
             var image:UIImage? = nil
             if let url = task.originalRequest.URL, let fileName = self.fileNameForURL(url) {
                 image = self.imageManager.imageWithName(fileName)
-                ImageDownloader.imageCache.cacheImage(image!, withURL: url)
+                HYLImageDownloader.imageCache.cacheImage(image!, withURL: url)
                 completionHandler(image: image, error: error, imageURL: url)
             }else{
                 completionHandler(image: nil, error: error, imageURL: nil)
