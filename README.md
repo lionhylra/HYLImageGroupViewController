@@ -4,7 +4,7 @@
 
 #### This is a image viewer similar to what WeChat uses to view images. It is written using swift and is compatible with objective-c. Just drop it to your project and pass images or urls to make the magic happen. Feel free to download the demo and give a try!
 
-### Features
+# Features
 
  - Simple to use
  - Support Objective-c and swift
@@ -12,7 +12,7 @@
  - Double tap to zoom in and zoom out
  - Single tap to close the image viewer
 
-### Install
+# Install
 #####1. CocoaPods
 (nod ready, coming soon)
 #####2. Drop in
@@ -60,13 +60,13 @@ vc.currentPage = 2
 [self presentViewController:vc animated:YES completion:nil];
 ```
 
-###What's behind the scene
+#What's behind the scene
 The HYLImageViewController only load three images one time: the current image on screen, the image before and the image after.  Everytime user scroll the scroll view, when page changes, it updates the scroll view's subview.
 
 When load images from url, it check the image in the memory cache(NSCache) first, if image is not found, then it check local file system. If the image is not found in cache, it downloads it and save it to local file and cache. It uses image url as the key in the cache storage and uses url's MD5 code as local file name.
-### Contact Author
+# Contact Author
 ######email: lionhylra@gmail.com
 ######website: lionhylra.com
 
-### Support Author?
+# Support Author?
 ![WeChat Pay QR code](https://github.com/lionhylra/HYLImageGroupViewController/blob/master/donate.jpg?raw=true)
