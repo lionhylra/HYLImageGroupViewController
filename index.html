@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>HYLImageGroupViewController by lionhylra</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">HYLImageGroupViewController</h1>
+      <h2 class="project-tagline">This is a image viewer similar to what WeChat uses to view images</h2>
+      <a href="https://github.com/lionhylra/HYLImageGroupViewController" class="btn">View on GitHub</a>
+      <a href="https://github.com/lionhylra/HYLImageGroupViewController/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/lionhylra/HYLImageGroupViewController/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="hylimagegroupviewcontroller" class="anchor" href="#hylimagegroupviewcontroller" aria-hidden="true"><span class="octicon octicon-link"></span></a>HYLImageGroupViewController</h1>
+
+<p><img src="https://github.com/lionhylra/HYLImageGroupViewController/blob/master/Demo/demo.gif?raw=true" alt="demo image"></p>
+
+<h4>
+<a id="this-is-a-image-viewer-similar-to-what-wechat-uses-to-view-images-it-is-written-using-swift-and-is-compatible-with-objective-c-just-drop-it-to-your-project-and-pass-images-or-urls-to-make-the-magic-happen-feel-free-to-download-the-demo-and-give-a-try" class="anchor" href="#this-is-a-image-viewer-similar-to-what-wechat-uses-to-view-images-it-is-written-using-swift-and-is-compatible-with-objective-c-just-drop-it-to-your-project-and-pass-images-or-urls-to-make-the-magic-happen-feel-free-to-download-the-demo-and-give-a-try" aria-hidden="true"><span class="octicon octicon-link"></span></a>This is a image viewer similar to what WeChat uses to view images. It is written using swift and is compatible with objective-c. Just drop it to your project and pass images or urls to make the magic happen. Feel free to download the demo and give a try!</h4>
+
+<h1>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h1>
+
+<ul>
+<li>Simple to use</li>
+<li>Support Objective-c and swift</li>
+<li>Cache images in memory cache(NSCache) and in file system</li>
+<li>Double tap to zoom in and zoom out</li>
+<li>Single tap to close the image viewer</li>
+</ul>
+
+<h1>
+<a id="install" class="anchor" href="#install" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install</h1>
+
+<h5>
+<a id="1-cocoapods" class="anchor" href="#1-cocoapods" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. CocoaPods</h5>
+
+<p>(nod ready, coming soon)</p>
+
+<h5>
+<a id="2-drop-in" class="anchor" href="#2-drop-in" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. Drop in</h5>
+
+<p><strong>For Swift</strong></p>
+
+<ul>
+<li>Just drop the "HYLImageGroupViewController" folder into your project.</li>
+</ul>
+
+<p><strong>For Objective-c</strong></p>
+
+<ul>
+<li>Drop the "HYLImageGroupViewController" folder into your project. </li>
+<li>Import the swift header file in the .m file which you would like to use this</li>
+</ul>
+
+<div class="highlight highlight-objective-c"><pre> #<span class="pl-k">import</span> <span class="pl-s"><span class="pl-pds">"</span>YourProjectName-Swift.h<span class="pl-pds">"</span></span></pre></div>
+
+<h3>
+<a id="how-to-use-api" class="anchor" href="#how-to-use-api" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to use (API)</h3>
+
+<p><strong>Swift:</strong></p>
+
+<div class="highlight highlight-swift"><pre><span class="pl-k">let</span> myImages:[UIImage]
+<span class="pl-k">let</span> viewController <span class="pl-k">=</span> HYLImageGoupViewController(images:myImages)
+<span class="pl-c">//in the view controller</span>
+<span class="pl-k">self</span><span class="pl-k">.</span>presentViewController(viewController, animated: <span class="pl-c1">true</span>, completion: <span class="pl-c1">nil</span>)</pre></div>
+
+<p>You can also init it with image urls:</p>
+
+<div class="highlight highlight-swift"><pre><span class="pl-k">let</span> urls:[NSURL]
+<span class="pl-k">let</span> thumbnails:[UIImage]
+<span class="pl-k">let</span> viewContrller <span class="pl-k">=</span> HYLImageGroupViewController(imageURLs: urlGroup, placeHolderImages: thumbnails)</pre></div>
+
+<p>Or you can init it with an array of url strings:</p>
+
+<div class="highlight highlight-swift"><pre><span class="pl-k">let</span> urlStrings:[<span class="pl-c1">String</span>]
+<span class="pl-c">//thumbnail could be nil</span>
+<span class="pl-k">let</span> viewController <span class="pl-k">=</span> HYLImageGroupViewController(imageURLStrings: urlStrings, placeHolderImages: <span class="pl-c1">nil</span>)</pre></div>
+
+<p>You can specify the start page after initializing the view controller:</p>
+
+<div class="highlight highlight-swift"><pre>viewController<span class="pl-k">.</span>currentPage <span class="pl-k">=</span> <span class="pl-c1">2</span><span class="pl-c">//it will open from the third image</span></pre></div>
+
+<p><strong>Objective-c</strong>
+Same API, just the code style is changed</p>
+
+<div class="highlight highlight-objective-c"><pre>HYLImageGroupViewController *vc = [[HYLImageGroupViewController <span class="pl-c1">alloc</span>] <span class="pl-c1">initWithImageURLs:</span>urls <span class="pl-c1">placeHolderImages:</span>placeholder];
+vc.currentPage = <span class="pl-c1">2</span>
+[<span class="pl-v">self</span> <span class="pl-c1">presentViewController:</span>vc <span class="pl-c1">animated:</span><span class="pl-c1">YES</span> <span class="pl-c1">completion:</span><span class="pl-c1">nil</span>];</pre></div>
+
+<h1>
+<a id="whats-behind-the-scene" class="anchor" href="#whats-behind-the-scene" aria-hidden="true"><span class="octicon octicon-link"></span></a>What's behind the scene</h1>
+
+<p>The HYLImageViewController only load three images one time: the current image on screen, the image before and the image after.  Everytime user scroll the scroll view, when page changes, it updates the scroll view's subview.</p>
+
+<p>When load images from url, it check the image in the memory cache(NSCache) first, if image is not found, then it check local file system. If the image is not found in cache, it downloads it and save it to local file and cache. It uses image url as the key in the cache storage and uses url's MD5 code as local file name.</p>
+
+<h1>
+<a id="contact-author" class="anchor" href="#contact-author" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contact Author</h1>
+
+<h6>
+<a id="email-lionhylragmailcom" class="anchor" href="#email-lionhylragmailcom" aria-hidden="true"><span class="octicon octicon-link"></span></a>email: <a href="mailto:lionhylra@gmail.com">lionhylra@gmail.com</a>
+</h6>
+
+<h6>
+<a id="website-lionhylracom" class="anchor" href="#website-lionhylracom" aria-hidden="true"><span class="octicon octicon-link"></span></a>website: lionhylra.com</h6>
+
+<h1>
+<a id="support-author" class="anchor" href="#support-author" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support Author?</h1>
+
+<p><img src="https://github.com/lionhylra/HYLImageGroupViewController/blob/master/donate.jpg?raw=true" alt="WeChat Pay QR code"></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/lionhylra/HYLImageGroupViewController">HYLImageGroupViewController</a> is maintained by <a href="https://github.com/lionhylra">lionhylra</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
