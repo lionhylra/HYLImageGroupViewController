@@ -28,7 +28,7 @@
  #import "YourProjectName-Swift.h"
 ```
  
-### How to use (API)
+# How to use (API)
 **Swift:**
 ```swift
 let myImages:[UIImage]
