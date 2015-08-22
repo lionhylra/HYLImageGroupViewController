@@ -65,7 +65,8 @@ The HYLImageViewController only load three images one time: the current image on
 
 When load images from url, it check the image in the memory cache(NSCache) first, if image is not found, then it check local file system. If the image is not found in cache, it downloads it and save it to local file and cache. It uses image url as the key in the cache storage and uses url's MD5 code as local file name.
 ### Contact Author
-email: lionhylra@gmail.com
-website: lionhylra.com
+######email: lionhylra@gmail.com
+######website: lionhylra.com
+
 ### Support Author?
 ![WeChat Pay QR code](https://github.com/lionhylra/HYLImageGroupViewController/blob/master/donate.jpg?raw=true)
