@@ -1,6 +1,6 @@
 # HYLImageGroupViewController
 
-![enter image description here](https://github.com/lionhylra/HYLImageGroupViewController/blob/master/Demo/demo.gif?raw=true)
+![demo image](https://github.com/lionhylra/HYLImageGroupViewController/blob/master/Demo/demo.gif?raw=true)
 
 #### This is a image viewer similar to what WeChat uses to view images. It is written using swift and is compatible with objective-c. Just drop it to your project and pass images or urls to make the magic happen. Feel free to download the demo and give a try!
 
@@ -67,4 +67,5 @@ When load images from url, it check the image in the memory cache(NSCache) first
 ### Contact Author
 email: lionhylra@gmail.com
 website: lionhylra.com
-### Support Author
+### Support Author?
+![WeChat Pay QR code](https://github.com/lionhylra/HYLImageGroupViewController/blob/master/donate.jpg?raw=true)
