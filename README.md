@@ -52,7 +52,7 @@ You can specify the start page after initializing the view controller:
 ```swift
 viewController.currentPage = 2//it will open from the third image
 ```
-**Objective-c**
+**Objective-c:**
 
 Same API, just the code style is changed
 ```objective-c
