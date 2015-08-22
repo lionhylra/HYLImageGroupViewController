@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eT2-FD-7P4">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="ws7-WR-ybK">
+            <objects>
+                <navigationController id="eT2-FD-7P4" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="i69-y6-lBD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ue5-2j-1gI" kind="relationship" relationship="rootViewController" id="KpQ-Xp-Uyv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bdd-nw-3zc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-690" y="211"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="3OZ-vp-nbh">
+            <objects>
+                <viewController id="Ue5-2j-1gI" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uP4-JW-zTH"/>
+                        <viewControllerLayoutGuide type="bottom" id="Yh7-Ue-MWW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zvn-Qv-p7Z">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yuu-si-65a">
+                                <rect key="frame" x="16" y="72" width="131" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Gtd-VE-iOJ"/>
+                                </constraints>
+                                <state key="normal" title="Open Single Image">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openSingleImage:" destination="Ue5-2j-1gI" eventType="touchUpInside" id="SqE-dV-OeK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="co1-Fc-aTj">
+                                <rect key="frame" x="16" y="148" width="208" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="208" id="y4n-NP-izU"/>
+                                </constraints>
+                                <state key="normal">
+                                    <string key="title">Open Multiple Images Locally,
+start at page 2</string>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openMultipleImages:" destination="Ue5-2j-1gI" eventType="touchUpInside" id="K31-wx-of8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="BLt-hY-ZzP">
+                                <rect key="frame" x="11" y="214" width="218" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="3Xr-Ch-uTL"/>
+                                </constraints>
+                                <state key="normal">
+                                    <string key="title">Open Multiple Images Locally,
+start at page3</string>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openMultipleImages:" destination="Ue5-2j-1gI" eventType="touchUpInside" id="eQ8-UX-GOP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h4v-qf-Hhw">
+                                <rect key="frame" x="16" y="110" width="203" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="cKC-hH-yn5"/>
+                                </constraints>
+                                <state key="normal" title="Open Multiple Images Locally">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openMultipleImages:" destination="Ue5-2j-1gI" eventType="touchUpInside" id="OC8-E3-6Fa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JgV-Pg-TRv">
+                                <rect key="frame" x="16" y="273" width="138" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="RL0-QO-rVw"/>
+                                </constraints>
+                                <state key="normal" title="Open Multiple URLs">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openMultipleURLs:" destination="Ue5-2j-1gI" eventType="touchUpInside" id="jJq-v6-iv1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6e3-lR-p7X">
+                                <rect key="frame" x="16" y="311" width="183" height="30"/>
+                                <state key="normal" title="Open Multiple URL Strings">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openMultipleURLStrings:" destination="Ue5-2j-1gI" eventType="touchUpInside" id="t9h-3q-zJi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JgV-Pg-TRv" firstAttribute="top" secondItem="BLt-hY-ZzP" secondAttribute="bottom" constant="8" symbolic="YES" id="O44-si-DcT"/>
+                            <constraint firstItem="6e3-lR-p7X" firstAttribute="top" secondItem="JgV-Pg-TRv" secondAttribute="bottom" constant="8" symbolic="YES" id="Rd6-Md-QiJ"/>
+                            <constraint firstItem="Yh7-Ue-MWW" firstAttribute="top" secondItem="JgV-Pg-TRv" secondAttribute="bottom" constant="297" id="Te9-gO-TdI"/>
+                            <constraint firstItem="h4v-qf-Hhw" firstAttribute="leading" secondItem="Zvn-Qv-p7Z" secondAttribute="leadingMargin" id="WlM-2D-LMW"/>
+                            <constraint firstItem="JgV-Pg-TRv" firstAttribute="leading" secondItem="co1-Fc-aTj" secondAttribute="leading" id="Y4Q-Kl-rSs"/>
+                            <constraint firstItem="h4v-qf-Hhw" firstAttribute="top" secondItem="Yuu-si-65a" secondAttribute="bottom" constant="8" symbolic="YES" id="buP-kq-4ho"/>
+                            <constraint firstItem="BLt-hY-ZzP" firstAttribute="top" secondItem="co1-Fc-aTj" secondAttribute="bottom" constant="8" symbolic="YES" id="egR-tN-pXS"/>
+                            <constraint firstItem="co1-Fc-aTj" firstAttribute="leading" secondItem="h4v-qf-Hhw" secondAttribute="leading" id="iHL-oo-j2g"/>
+                            <constraint firstItem="6e3-lR-p7X" firstAttribute="leading" secondItem="JgV-Pg-TRv" secondAttribute="leading" id="jKD-HJ-drZ"/>
+                            <constraint firstItem="co1-Fc-aTj" firstAttribute="top" secondItem="h4v-qf-Hhw" secondAttribute="bottom" constant="8" symbolic="YES" id="k8s-3h-iuJ"/>
+                            <constraint firstItem="co1-Fc-aTj" firstAttribute="centerX" secondItem="BLt-hY-ZzP" secondAttribute="centerX" id="loZ-ed-QRF"/>
+                            <constraint firstItem="Yuu-si-65a" firstAttribute="top" secondItem="uP4-JW-zTH" secondAttribute="bottom" constant="8" symbolic="YES" id="tKe-v5-iJY"/>
+                            <constraint firstItem="BLt-hY-ZzP" firstAttribute="leading" secondItem="Zvn-Qv-p7Z" secondAttribute="leadingMargin" constant="-5" id="ulp-by-K27"/>
+                            <constraint firstItem="Yuu-si-65a" firstAttribute="leading" secondItem="h4v-qf-Hhw" secondAttribute="leading" id="xbb-fp-J92"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="x7D-z4-3JM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CYI-Dh-uw2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-29" y="211"/>
+        </scene>
+    </scenes>
+</document>
