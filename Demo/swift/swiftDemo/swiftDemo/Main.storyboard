@@ -24,7 +24,7 @@
         <!--View Controller-->
         <scene sceneID="Ejk-I7-bf7">
             <objects>
-                <viewController id="JGA-Nm-sTg" customClass="ViewController" customModule="HYLImageGroupViewControllerDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="JGA-Nm-sTg" customClass="ViewController" customModule="swiftDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qJR-0F-Mer"/>
                         <viewControllerLayoutGuide type="bottom" id="Dzs-PO-edZ"/>

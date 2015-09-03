@@ -146,7 +146,9 @@ public class HYLImageDownloader: NSObject,NSURLSessionDownloadDelegate, NSURLSes
             var image:UIImage? = nil
             if let url = task.originalRequest.URL, let fileName = self.fileNameForURL(url) {
                 image = self.imageManager.imageWithName(fileName)
-                HYLImageDownloader.imageCache.cacheImage(image!, withURL: url)
+                if image != nil {
+                    HYLImageDownloader.imageCache.cacheImage(image!, withURL: url)
+                }
                 completionHandler(image: image, error: error, imageURL: url)
             }else{
                 completionHandler(image: nil, error: error, imageURL: nil)

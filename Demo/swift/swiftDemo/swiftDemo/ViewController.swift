@@ -27,7 +27,9 @@ class ViewController: UIViewController {
         "https://farm6.staticflickr.com/5730/20735277275_06179836e2_b.jpg",
         "https://farm6.staticflickr.com/5775/20747091191_df05888526_b.jpg",
         "https://farm1.staticflickr.com/708/20730188882_700d004af1_b.jpg",
-        "https://farm1.staticflickr.com/709/20734995351_45e5e80b9f_b.jpg"
+//        "https://farm1.staticflickr.com/709/20734995351_45e5e80b9f_b.jpg"
+        "https://farm1.staticflickr.com/709/20734995351_45e5e80b9f_.jpg",
+        "http://adasd.adasd.asd.jpg"
     ]
 
     override func viewDidLoad() {

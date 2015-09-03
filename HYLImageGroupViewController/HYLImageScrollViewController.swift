@@ -14,6 +14,7 @@ public class HYLImageScrollViewController: UIViewController, UIScrollViewDelegat
     // MARK: - Private Properties
     private let maskView = UIView()
     private let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.WhiteLarge)
+    private let errorLabel = UILabel()
     private let scrollView = UIScrollView()
     private let imageView = UIImageView()
     private var image:UIImage?
@@ -47,6 +48,7 @@ public class HYLImageScrollViewController: UIViewController, UIScrollViewDelegat
         if self.imageURL != nil {
             configureLoadingMask()
         }
+        configureErrorLabel()
         
         /* gesture */
         var doubleTapRecognizer = UITapGestureRecognizer(target: self, action: "scrollViewDoubleTapped:")
@@ -105,19 +107,27 @@ public class HYLImageScrollViewController: UIViewController, UIScrollViewDelegat
     
     // MARK: - Private Methods
     private func layoutSubViews(){
+        /* scrollView */
         self.scrollView.frame = CGRect(origin: CGPointZero, size: self.view.frame.size)
+        /* imageView */
         if let imageSize = self.image?.size {
             self.imageView.frame = CGRect(origin: CGPointZero, size: imageSize)
         }else{
             self.imageView.frame = CGRect(origin: CGPointZero, size: self.scrollView.frame.size)
         }
+        
+        /* errorLabel */
+        self.errorLabel.frame.size.width = self.view.bounds.size.width * 0.8
     }
     
     private func addSubViews(){
         self.view.addSubview(self.scrollView)
         self.scrollView.addSubview(self.imageView)
+        
         self.view.addSubview(self.maskView)
         self.maskView.addSubview(self.activityIndicator)
+        
+        self.view.addSubview(self.errorLabel)
     }
     
     private func configureScrollView(){
@@ -160,6 +170,19 @@ public class HYLImageScrollViewController: UIViewController, UIScrollViewDelegat
                     self.configureScrollView()
                     self.loadingDidComplete()
                 }
+                if error != nil {
+                    self.loadingDidComplete()
+                    self.errorLabel.hidden = false
+                    self.errorLabel.text = "Error: " + error!.localizedDescription
+                    
+                    /* configure size of errorLabel */
+                    self.errorLabel.sizeToFit()
+                    var frame = self.errorLabel.frame
+                    frame.origin.x = self.view.bounds.size.width / 2 - frame.width / 2
+                    frame.origin.y = self.view.bounds.size.height / 2 - frame.height / 2
+                    self.errorLabel.frame = frame
+                    self.view.bringSubviewToFront(self.errorLabel)
+                }
             })
         }else{
             self.imageView.image = self.image
@@ -176,6 +199,14 @@ public class HYLImageScrollViewController: UIViewController, UIScrollViewDelegat
         frame.origin.y = (maskView.bounds.size.height - activityIndicator.bounds.height)/2
         self.activityIndicator.frame = frame
         self.activityIndicator.startAnimating()
+    }
+    
+    private func configureErrorLabel(){
+        self.errorLabel.text = "Error!"
+        self.errorLabel.numberOfLines = 0
+        self.errorLabel.backgroundColor = UIColor.blackColor()
+        self.errorLabel.textColor = UIColor.whiteColor()
+        self.errorLabel.hidden = true
     }
     
     private func loadingDidComplete(){
@@ -203,4 +234,4 @@ public class HYLImageScrollViewController: UIViewController, UIScrollViewDelegat
         
     }
     
-    }
+}
