@@ -58,8 +58,7 @@ public class HYLImageGroupViewController: UIViewController, UIScrollViewDelegate
     public convenience init(imageURLStrings:[String], placeHolderImages:[UIImage]?){
         var urls = [NSURL]()
         for str in imageURLStrings {
-            if let url = NSURL(string: str),
-                scheme = url.scheme, host = url.host {
+            if let url = NSURL(string: str) where url.host != nil {
                 urls.append(url)
             }
         }

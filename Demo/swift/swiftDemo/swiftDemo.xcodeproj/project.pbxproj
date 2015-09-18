@@ -21,6 +21,7 @@
 		591F3F751B8871B300D5388D /* UIImageView+LocalCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591F3F6D1B8871B300D5388D /* UIImageView+LocalCache.swift */; };
 		591F3F781B8871E500D5388D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 591F3F761B8871E500D5388D /* LaunchScreen.xib */; };
 		591F3F791B8871E500D5388D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 591F3F771B8871E500D5388D /* Main.storyboard */; };
+		59B7D0B91BABBA0000DD0B39 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B7D0B81BABBA0000DD0B39 /* String.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		591F3F6D1B8871B300D5388D /* UIImageView+LocalCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+LocalCache.swift"; sourceTree = "<group>"; };
 		591F3F761B8871E500D5388D /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		591F3F771B8871E500D5388D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		59B7D0B81BABBA0000DD0B39 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 				591F3F6B1B8871B300D5388D /* HYLImageScrollViewController.swift */,
 				591F3F6C1B8871B300D5388D /* String+MD5.swift */,
 				591F3F6D1B8871B300D5388D /* UIImageView+LocalCache.swift */,
+				59B7D0B81BABBA0000DD0B39 /* String.swift */,
 			);
 			name = HYLImageGroupViewController;
 			path = ../../../HYLImageGroupViewController;
@@ -264,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				591F3F701B8871B300D5388D /* HYLFileManager.swift in Sources */,
+				59B7D0B91BABBA0000DD0B39 /* String.swift in Sources */,
 				591F3F751B8871B300D5388D /* UIImageView+LocalCache.swift in Sources */,
 				591F3F721B8871B300D5388D /* HYLImageManager.swift in Sources */,
 				591F3F711B8871B300D5388D /* UIImage+Compress.swift in Sources */,

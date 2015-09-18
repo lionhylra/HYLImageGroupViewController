@@ -59,7 +59,7 @@ extension UIImage{
         UIGraphicsBeginImageContext(rect.size)
         image.drawInRect(rect)
         let img = UIGraphicsGetImageFromCurrentImageContext()
-        let imageData = UIImageJPEGRepresentation(img, quality)
+        let imageData = UIImageJPEGRepresentation(img, quality)!
         UIGraphicsEndImageContext()
         
         return UIImage(data: imageData)

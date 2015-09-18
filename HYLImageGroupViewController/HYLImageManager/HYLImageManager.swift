@@ -92,7 +92,7 @@ public class HYLImageManager: NSObject {
         /* resize and compress image */
         let resizedImage = UIImage.compressImage(image, withMaxWidth: self.maxSize.width, maxHeight: self.maxSize.height, quality: self.compressionQuality)
         /* write to file */
-        let data = UIImageJPEGRepresentation(image, 1.0)
+        let data = UIImageJPEGRepresentation(resizedImage, 1.0)!
         self.fileManager.saveData(data, withName: imageName)
         if self.ignoreThumbnail {
             return
@@ -100,7 +100,7 @@ public class HYLImageManager: NSObject {
         
         /* thumbnail */
         let thumbnailImage = UIImage.compressImage(image, withMaxWidth: self.thumbnailMaxSize.width, maxHeight: self.thumbnailMaxSize.height, quality: self.compressionQuality * CGFloat(0.9))
-        let thumbnailData = UIImageJPEGRepresentation(thumbnailImage, 1.0)
+        let thumbnailData = UIImageJPEGRepresentation(thumbnailImage, 1.0)!
         self.thumbnailFileManager.saveData(thumbnailData, withName: imageName)
     }
     
@@ -110,7 +110,7 @@ public class HYLImageManager: NSObject {
         do {
             try self.fileManager.deleteFileWithName(imageName)
             didDeleteOriginal = true
-        } catch var error1 as NSError {
+        } catch let error1 as NSError {
             error = error1
             didDeleteOriginal = false
         }
@@ -124,7 +124,7 @@ public class HYLImageManager: NSObject {
         do {
             try self.thumbnailFileManager.deleteFileWithName(imageName)
             didDeleteThumbnail = true
-        } catch var error1 as NSError {
+        } catch let error1 as NSError {
             error = error1
             didDeleteThumbnail = false
         }
@@ -140,7 +140,7 @@ public class HYLImageManager: NSObject {
         do {
             try self.fileManager.renameFileFrom(imageName, toNewFileName: newName)
             didRenameOriginal = true
-        } catch var error1 as NSError {
+        } catch let error1 as NSError {
             error = error1
             didRenameOriginal = false
         }
@@ -155,7 +155,7 @@ public class HYLImageManager: NSObject {
         do {
             try self.thumbnailFileManager.renameFileFrom(imageName, toNewFileName: newName)
             didRenameThumbnail = true
-        } catch var error1 as NSError {
+        } catch let error1 as NSError {
             error = error1
             didRenameThumbnail = false
         }

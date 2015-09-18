@@ -28,17 +28,11 @@ func synchronizd(lock: AnyObject, closure:()->()) {
 
 class HYLImageCache:NSCache,HYLImageMemoryCache{
     func cachedImageForURL(url: NSURL) -> UIImage? {
-        if let key = url.absoluteString{
-            return self.objectForKey(key) as? UIImage
-        }
-        
-        return nil
+        return self.objectForKey(url.absoluteString) as? UIImage
     }
     
     func cacheImage(image: UIImage, withURL url: NSURL) {
-        if let key = url.absoluteString{
-            self.setObject(image, forKey: key)
-        }
+        self.setObject(image, forKey: url.absoluteString)
     }
     
 }
@@ -49,8 +43,7 @@ public class HYLImageDownloader: NSObject,NSURLSessionDownloadDelegate, NSURLSes
         let config = NSURLSessionConfiguration.defaultSessionConfiguration()
         return NSURLSession(configuration: config, delegate: self, delegateQueue: NSOperationQueue.mainQueue())
         }()
-    
-    lazy private var imageManager = HYLImageManager(directory: NSSearchPathDirectory.CachesDirectory, pathComponents: ["com.HYLMultiImagesViewController.Caches"])
+    lazy private var imageManager:HYLImageManager = HYLImageManager(directory: NSSearchPathDirectory.CachesDirectory, pathComponents: ["com.HYLMultiImagesViewController.Caches"])
     static private let imageCache = {()->HYLImageCache in
         let cache = HYLImageCache()
         NSNotificationCenter.defaultCenter().addObserverForName(UIApplicationDidReceiveMemoryWarningNotification, object: nil, queue: NSOperationQueue.mainQueue(), usingBlock: { (notification) -> Void in
@@ -70,10 +63,7 @@ public class HYLImageDownloader: NSObject,NSURLSessionDownloadDelegate, NSURLSes
     
     // MARK: - retrieve image methods
     public func fileNameForURL(url:NSURL) -> String?{
-        if let urlStr = url.absoluteString {
-            return urlStr.kf_MD5()
-        }
-        return nil
+        return url.absoluteString.kf_MD5()
     }
     
     public func retrieveImageForURL(url:NSURL) -> UIImage?{
@@ -106,7 +96,7 @@ public class HYLImageDownloader: NSObject,NSURLSessionDownloadDelegate, NSURLSes
         /* get the destination */
         let destinationPath:String
         let destinationURL:NSURL
-        if let url = downloadTask.originalRequest.URL, fileName = self.fileNameForURL(url) {
+        if let url = downloadTask.originalRequest!.URL, fileName = self.fileNameForURL(url) {
             destinationPath = self.imageManager.pathForImageName(fileName)!
             destinationURL = NSURL(fileURLWithPath: destinationPath)
         }else{
@@ -121,7 +111,7 @@ public class HYLImageDownloader: NSObject,NSURLSessionDownloadDelegate, NSURLSes
         if fileManager.fileExistsAtPath(destinationPath) {
             do {
                 try fileManager.replaceItemAtURL(destinationURL, withItemAtURL: location, backupItemName: nil, options: NSFileManagerItemReplacementOptions.UsingNewMetadataOnly, resultingItemURL: nil)
-            } catch var error1 as NSError {
+            } catch let error1 as NSError {
                 error = error1
             }
         }else{
@@ -129,14 +119,14 @@ public class HYLImageDownloader: NSObject,NSURLSessionDownloadDelegate, NSURLSes
             
                 do {
                     try fileManager.createDirectoryAtPath(destinationPath.stringByDeletingLastPathComponent, withIntermediateDirectories: true, attributes: nil)
-                } catch var error1 as NSError {
+                } catch let error1 as NSError {
                     error = error1
                 }
             
             }
             do {
                 try fileManager.moveItemAtURL(location, toURL: destinationURL)
-            } catch var error1 as NSError {
+            } catch let error1 as NSError {
                 error = error1
             }
         }
@@ -156,7 +146,7 @@ public class HYLImageDownloader: NSObject,NSURLSessionDownloadDelegate, NSURLSes
     public func URLSession(session: NSURLSession, task: NSURLSessionTask, didCompleteWithError error: NSError?) {
         if let completionHandler = self.completionBlock {
             var image:UIImage? = nil
-            if let url = task.originalRequest.URL, let fileName = self.fileNameForURL(url) {
+            if let url = task.originalRequest!.URL, let fileName = self.fileNameForURL(url) {
                 image = self.imageManager.imageWithName(fileName)
                 if image != nil {
                     HYLImageDownloader.imageCache.cacheImage(image!, withURL: url)
@@ -168,7 +158,7 @@ public class HYLImageDownloader: NSObject,NSURLSessionDownloadDelegate, NSURLSes
         }
         /* remove from track list */
         synchronizd(self) {
-            if let url = task.originalRequest.URL {
+            if let url = task.originalRequest!.URL {
                 self.downloadingURLsList.removeObject(url)
             }
         }
