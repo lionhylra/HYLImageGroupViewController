@@ -51,7 +51,7 @@ public class HYLImageScrollViewController: UIViewController, UIScrollViewDelegat
         configureErrorLabel()
         
         /* gesture */
-        var doubleTapRecognizer = UITapGestureRecognizer(target: self, action: "scrollViewDoubleTapped:")
+        let doubleTapRecognizer = UITapGestureRecognizer(target: self, action: "scrollViewDoubleTapped:")
         doubleTapRecognizer.numberOfTapsRequired = 2
         doubleTapRecognizer.numberOfTouchesRequired = 1
         self.scrollView.addGestureRecognizer(doubleTapRecognizer)

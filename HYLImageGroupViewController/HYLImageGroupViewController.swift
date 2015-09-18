@@ -133,7 +133,7 @@ public class HYLImageGroupViewController: UIViewController, UIScrollViewDelegate
     
     private func layoutSubviews(){
         /* scrollView */
-        self.scrollView.setTranslatesAutoresizingMaskIntoConstraints(false)
+        self.scrollView.translatesAutoresizingMaskIntoConstraints = false
         let topEdgeConstraint = NSLayoutConstraint(item: self.scrollView, attribute: .Top , relatedBy: .Equal, toItem: self.view, attribute: .Top , multiplier: 1.0, constant: 0.0)
         let leftEdgeConstraint = NSLayoutConstraint(item: self.scrollView, attribute: .Leading, relatedBy: .Equal, toItem: self.view, attribute: .Leading, multiplier: 1.0, constant: 0.0)
         let bottomEdgeConstraint = NSLayoutConstraint(item: self.scrollView, attribute: .Bottom, relatedBy: .Equal, toItem: self.view, attribute: .Bottom, multiplier: 1.0, constant: 0.0)
@@ -144,7 +144,7 @@ public class HYLImageGroupViewController: UIViewController, UIScrollViewDelegate
         self.view.addConstraint(rightEdgeConstraint)
         
         /* pageControl */
-        self.pageControl.setTranslatesAutoresizingMaskIntoConstraints(false)
+        self.pageControl.translatesAutoresizingMaskIntoConstraints = false
         let bottomEdgeConstraint_pageControl = NSLayoutConstraint(item: self.pageControl, attribute: .Bottom, relatedBy: .Equal, toItem: self.view, attribute: .Bottom, multiplier: 1.0, constant: -35.0)
         let centerXConstraint = NSLayoutConstraint(item: self.pageControl, attribute: NSLayoutAttribute.CenterX, relatedBy: .Equal, toItem: self.view, attribute: .CenterX, multiplier: 1.0, constant: 0.0)
         self.view.addConstraint(bottomEdgeConstraint_pageControl)
@@ -178,11 +178,11 @@ public class HYLImageGroupViewController: UIViewController, UIScrollViewDelegate
         
     }
     
-    private func loadPage(#prev:Int, currentPage:Int, next:Int){
+    private func loadPage(prev prev:Int, currentPage:Int, next:Int){
         /* clear views */
         for viewController in self.childViewControllers {
             viewController.removeFromParentViewController()
-            viewController.view??.removeFromSuperview()
+            viewController.view?.removeFromSuperview()
         }
     
         
@@ -194,7 +194,7 @@ public class HYLImageGroupViewController: UIViewController, UIScrollViewDelegate
             }
             
             /* prepare frame */
-            var frame = CGRectMake((kPageSize.width + kPageInterval) * CGFloat(page), 0, kPageSize.width, kPageSize.height)
+            let frame = CGRectMake((kPageSize.width + kPageInterval) * CGFloat(page), 0, kPageSize.width, kPageSize.height)
 
             
             if self.imageURLs != nil {

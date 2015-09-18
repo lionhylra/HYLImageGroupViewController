@@ -108,7 +108,7 @@ public class HYLImageDownloader: NSObject,NSURLSessionDownloadDelegate, NSURLSes
         let destinationURL:NSURL
         if let url = downloadTask.originalRequest.URL, fileName = self.fileNameForURL(url) {
             destinationPath = self.imageManager.pathForImageName(fileName)!
-            destinationURL = NSURL(fileURLWithPath: destinationPath)!
+            destinationURL = NSURL(fileURLWithPath: destinationPath)
         }else{
             return
         }
@@ -119,17 +119,29 @@ public class HYLImageDownloader: NSObject,NSURLSessionDownloadDelegate, NSURLSes
         let fileManager = NSFileManager.defaultManager()
         
         if fileManager.fileExistsAtPath(destinationPath) {
-            fileManager.replaceItemAtURL(destinationURL, withItemAtURL: location, backupItemName: nil, options: NSFileManagerItemReplacementOptions.UsingNewMetadataOnly, resultingItemURL: nil, error: &error)
+            do {
+                try fileManager.replaceItemAtURL(destinationURL, withItemAtURL: location, backupItemName: nil, options: NSFileManagerItemReplacementOptions.UsingNewMetadataOnly, resultingItemURL: nil)
+            } catch var error1 as NSError {
+                error = error1
+            }
         }else{
             if !fileManager.fileExistsAtPath(destinationPath.stringByDeletingLastPathComponent, isDirectory: &isDir) || !isDir {
             
-                fileManager.createDirectoryAtPath(destinationPath.stringByDeletingLastPathComponent, withIntermediateDirectories: true, attributes: nil, error: &error)
+                do {
+                    try fileManager.createDirectoryAtPath(destinationPath.stringByDeletingLastPathComponent, withIntermediateDirectories: true, attributes: nil)
+                } catch var error1 as NSError {
+                    error = error1
+                }
             
             }
-            fileManager.moveItemAtURL(location, toURL: destinationURL, error: &error)
+            do {
+                try fileManager.moveItemAtURL(location, toURL: destinationURL)
+            } catch var error1 as NSError {
+                error = error1
+            }
         }
         if error != nil {
-            println("Move downloaded file to destination \"\(destinationPath)\" failed with error: \(error!.description)")
+            print("Move downloaded file to destination \"\(destinationPath)\" failed with error: \(error!.description)")
         }
         
     }
