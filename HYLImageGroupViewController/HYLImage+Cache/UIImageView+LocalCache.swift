@@ -9,7 +9,7 @@
 import UIKit
 
 
-extension UIImageView {
+public extension UIImageView {
     
     func setImageWithURL(url:NSURL){
         setImageWithURL(url, placeholderImage: nil)
@@ -23,7 +23,7 @@ extension UIImageView {
         setImageWithURL(url, placeholderImage: placeholderImage, progressBlock: nil, completionBlock: completionBlock)
     }
     
-    func setImageWithURL(url:NSURL, placeholderImage: UIImage?, progressBlock:ProgressBlock?,completionBlock:CompletionBlock?){
+    func setImageWithURL(url:NSURL, placeholderImage: UIImage? = nil, progressBlock:ProgressBlock? = nil,completionBlock:CompletionBlock? = nil){
         /* if the image is cached */
         let imageDownloader = HYLImageDownloader(progressBlock: progressBlock) {[unowned self] (image, error, imageURL) -> () in
             self.image = image
