@@ -19,11 +19,11 @@ extension UIImageView {
         setImageWithURL(url, placeholderImage: placeholderImage, completionBlock: nil)
     }
     
-    func setImageWithURL(url:NSURL, placeholderImage: UIImage?, completionBlock:CompletionBlock?){
+    func setImageWithURL(url:NSURL, placeholderImage: UIImage?, completionBlock:HYLImageCacheDownloaderCompletionBlock?){
         setImageWithURL(url, placeholderImage: placeholderImage, progressBlock: nil, completionBlock: completionBlock)
     }
     
-    func setImageWithURL(url:NSURL, placeholderImage: UIImage?, progressBlock:ProgressBlock?,completionBlock:CompletionBlock?){
+    func setImageWithURL(url:NSURL, placeholderImage: UIImage?, progressBlock:HYLImageCacheDownloaderProgressBlock?,completionBlock:HYLImageCacheDownloaderCompletionBlock?){
         /* if the image is cached */
         let imageDownloader = HYLImageDownloader(progressBlock: progressBlock) {[unowned self] (image, error, imageURL) -> () in
             if let image = image {

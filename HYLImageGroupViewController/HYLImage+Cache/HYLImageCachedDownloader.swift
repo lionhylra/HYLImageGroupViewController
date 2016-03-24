@@ -8,8 +8,8 @@
 
 import UIKit
 
-public typealias ProgressBlock = ((receivedSize: Int64, totalSize: Int64) -> ())
-public typealias CompletionBlock = ((image:UIImage?, error:NSError?, imageURL:NSURL?)->())
+public typealias HYLImageCacheDownloaderProgressBlock = ((receivedSize: Int64, totalSize: Int64) -> ())
+public typealias HYLImageCacheDownloaderCompletionBlock = ((image:UIImage?, error:NSError?, imageURL:NSURL?)->())
 
 protocol HYLImageMemoryCache {
     func cachedImageForURL(url:NSURL) -> UIImage?
@@ -52,10 +52,10 @@ public class HYLImageDownloader: NSObject,NSURLSessionDownloadDelegate, NSURLSes
         return cache
     }()
     private var downloadingURLsList = NSMutableArray()//track the downloading tasks
-    var progressBlock:ProgressBlock?
-    var completionBlock:CompletionBlock?
+    var progressBlock:HYLImageCacheDownloaderProgressBlock?
+    var completionBlock:HYLImageCacheDownloaderCompletionBlock?
     // MARK: - init
-    convenience init(progressBlock: ProgressBlock?, completionBlock:CompletionBlock?){
+    convenience init(progressBlock: HYLImageCacheDownloaderProgressBlock?, completionBlock:HYLImageCacheDownloaderCompletionBlock?){
         self.init()
         self.progressBlock = progressBlock
         self.completionBlock = completionBlock
