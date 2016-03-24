@@ -157,7 +157,6 @@ class MD5 : HashBase {
         let chunkSizeBytes = 512 / 8 // 64
         var leftMessageBytes = tmpMessage.length
         for i in 0.stride(to: tmpMessage.length, by: chunkSizeBytes) {
-                leftMessageBytes -= chunkSizeBytes
             let chunk = tmpMessage.subdataWithRange(NSRange(location: i, length: min(chunkSizeBytes,leftMessageBytes)))
             
             // break chunk into sixteen 32-bit words M[j], 0 ≤ j ≤ 15
@@ -209,6 +208,7 @@ class MD5 : HashBase {
             hh[1] = hh[1] &+ B
             hh[2] = hh[2] &+ C
             hh[3] = hh[3] &+ D
+            leftMessageBytes -= chunkSizeBytes
         }
         
         let buf: NSMutableData = NSMutableData();
