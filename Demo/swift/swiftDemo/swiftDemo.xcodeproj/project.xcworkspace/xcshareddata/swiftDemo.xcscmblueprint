@@ -1,0 +1,37 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "4DF1E8C2FCE2992E68196FDE20AB6A48F725201B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "4DF1E8C2FCE2992E68196FDE20AB6A48F725201B" : 0,
+    "6959367217BC2A705D7A1D2C61E0E8A71E88A7B0" : 0,
+    "5161BF548549E249AB03D899B398FB3C4CB82115" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "1B97486F-F033-4DB6-AB05-F967EFEA6F69",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "4DF1E8C2FCE2992E68196FDE20AB6A48F725201B" : "HYLImageGroupViewController",
+    "6959367217BC2A705D7A1D2C61E0E8A71E88A7B0" : "HYLImageGroupViewController\/HYLImageCache\/",
+    "5161BF548549E249AB03D899B398FB3C4CB82115" : "HYLImageGroupViewController\/HYLImageCache\/HYLImageManager\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "swiftDemo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Demo\/swift\/swiftDemo\/swiftDemo.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/lionhylra\/HYLImageGroupViewController.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4DF1E8C2FCE2992E68196FDE20AB6A48F725201B"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/lionhylra\/HYLImageManager.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5161BF548549E249AB03D899B398FB3C4CB82115"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/lionhylra\/HYLImageCache.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6959367217BC2A705D7A1D2C61E0E8A71E88A7B0"
+    }
+  ]
+}
